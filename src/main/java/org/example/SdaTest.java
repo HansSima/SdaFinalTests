@@ -1,7 +1,10 @@
 package org.example;
 
 import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SdaTest {
 
@@ -9,6 +12,16 @@ public class SdaTest {
 
     @Before
     public void setUp(){
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hanss\\Desktop\\Software Development Academy\\Kody\\SdaFinalTest\\src\\main\\resources\\chromedriver.exe");
+        driver = new ChromeDriver();
+    }
+
+    @Test
+    public void sdaTest() {
+        //Toto mi na jede na stranku tutorialpoint
+        driver.get("https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php");
+        //Toto mi najde na strance prvek a vepise jmeno
+        driver.findElement(By.id("name")).sendKeys("Jenda");
 
     }
 
