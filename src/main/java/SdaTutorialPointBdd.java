@@ -1,9 +1,9 @@
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -38,5 +38,10 @@ public class SdaTutorialPointBdd {
     @Then("Uzivatel vidi zaskrtnuty checkbox s id {string}")
     public void uzivatelVidiZaskrtnutyCheckboxSId(String idPrvku) {
         Assert.assertTrue(driver.findElement(By.id(idPrvku)).isSelected());
+    }
+
+    @When("Uzivatel klikne na tlacitko plus pro rozbaleni nabidky s xpath {string}")
+    public void uzivatelKlikneNaTlacitkoPlusProRozbaleniNabidkySXpath(String xpath) {
+        driver.findElement(By.xpath(xpath)).click();
     }
 }
