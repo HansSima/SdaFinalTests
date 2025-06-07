@@ -35,13 +35,18 @@ public class SdaTutorialPointBdd {
         driver.findElement(By.id(idPrvku)).click();
     }
 
+    @When("Uzivatel klikne na tlacitko plus pro rozbaleni nabidky s xpath {string}")
+    public void uzivatelKlikneNaTlacitkoPlusProRozbaleniNabidkySXpath(String xpathCesta) {
+        driver.findElement(By.xpath(xpathCesta)).click();
+    }
+
     @Then("Uzivatel vidi zaskrtnuty checkbox s id {string}")
     public void uzivatelVidiZaskrtnutyCheckboxSId(String idPrvku) {
         Assert.assertTrue(driver.findElement(By.id(idPrvku)).isSelected());
     }
 
-    @When("Uzivatel klikne na tlacitko plus pro rozbaleni nabidky s xpath {string}")
-    public void uzivatelKlikneNaTlacitkoPlusProRozbaleniNabidkySXpath(String xpath) {
-        driver.findElement(By.xpath(xpath)).click();
+    @Then("Uzivatel vidi nezaskrtnuty checkbox s id {string}")
+    public void uzivatelVidiNezaskrtnutyCheckboxSId(String idPrvku) {
+        Assert.assertFalse(driver.findElement(By.id(idPrvku)).isSelected());
     }
 }
