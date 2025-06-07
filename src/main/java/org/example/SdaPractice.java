@@ -28,18 +28,14 @@ public class SdaPractice {
     @Test
     public void sdaTest() {
         //Toto mi na jede na stranku tutorialpoint
-        driver.get("https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php");
-        //Toto mi zvetsi obrazovku
+        driver.get("https://www.tutorialspoint.com/selenium/practice/check-box.php");
         driver.manage().window().setSize(new Dimension(1936, 1048));
-        //Toto mi najde na strance prvek a vepise jmeno
-        driver.findElement(By.id("name")).sendKeys("Jenda");
-        //Toto mi najde na strance prvek a vepise mail
-        driver.findElement(By.id("email")).sendKeys("email@email.cz");
-        //Toto nam overi, zda je spravne text
-        Assert.assertEquals("Student Registration Form", driver.findElement(By.xpath("//*[@id=\"practiceForm\"]/h1")).getText());
+        driver.findElement(By.xpath("//*[@id=\"bs_1\"]/span[1]")).click();
+        driver.findElement(By.id("c_bs_1")).click();
+        driver.findElement(By.id("c_bf_2")).click();
+        driver.findElement(By.xpath("//*[@id=\"bs_2\"]/span[1]")).click();
+        driver.findElement(By.id("c_bf_4")).click();
+        driver.findElement(By.id("c_bf_3")).click();
     }
-
-
-
 
 }
