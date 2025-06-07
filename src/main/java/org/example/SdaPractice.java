@@ -60,9 +60,6 @@ public class SdaPractice {
         //Req-C2
         Assert.assertFalse(driver.findElement(By.id("c_bs_2")).isSelected());
 
-
-
-
     }
 
 }
