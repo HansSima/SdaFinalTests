@@ -9,7 +9,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SdaTest {
+public class SdaPractice {
 
     private WebDriver driver;
 
@@ -38,6 +38,8 @@ public class SdaTest {
         //Toto nam overi, zda je spravne text
         Assert.assertEquals("Student Registration Form", driver.findElement(By.xpath("//*[@id=\"practiceForm\"]/h1")).getText());
     }
+
+
 
 
 }
