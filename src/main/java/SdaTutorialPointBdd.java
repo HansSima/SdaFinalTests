@@ -16,6 +16,7 @@ public class SdaTutorialPointBdd {
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\hanss\\Desktop\\Software Development Academy\\Kody\\SdaFinalTest\\src\\main\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
+        //Toto je pokus
     }
 
     @After
